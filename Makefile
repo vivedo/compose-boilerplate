@@ -23,7 +23,7 @@ info:
 
 .PHONY: gitremote
 gitremote:
-ifdef $(url)
+ifdef url
 	git remote set-url origin $(url)
 else
 	@echo "Error: remote url not specified."
@@ -34,7 +34,7 @@ endif
 
 .PHONY: setproject
 setproject:
-ifdef $(name)
+ifdef name
 	@echo ($name) > .projectname
 else
 	@echo "Error: project name not specified."

@@ -7,6 +7,6 @@ Blank docker-compose configuration with production and development compose files
 ```
 git clone https://github.com/vivedo/compose-boilerplate.git <project-dir>
 cd <project-dir>
-make setproject name=<new-project-name>
-make gitremote url=<new-git-repo>
+make setproject name="<new-project-name>"
+make gitremote url="<new-git-repo>"
 ```
