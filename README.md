@@ -4,4 +4,9 @@ Blank docker-compose configuration with production and development compose files
 
 ## How to use it
 
-Clone, change git remote-url, configre Makefile PROJECT_NAME and start new project
+```
+git clone https://github.com/vivedo/compose-boilerplate.git <project-dir>
+cd <project-dir>
+make setproject name=<new-project-name>
+make gitremote url=<new-git-repo>
+```
