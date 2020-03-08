@@ -35,7 +35,7 @@ endif
 .PHONY: setproject
 setproject:
 ifdef name
-	@echo ($name) > .projectname
+	@echo $(name) > .projectname
 else
 	@echo "Error: project name not specified."
 	@echo "Usage:"
