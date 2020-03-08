@@ -21,6 +21,17 @@ info:
 	@echo " \e[31mPRODCOMPOSE CMD:\e[0m $(PRODCOMPOSE)";
 	@echo "--------------------------------";
 
+.PHONY: gitremote
+gitremote:
+ifdef $(url)
+	git remote set-url origin $(url)
+else
+	@echo "Error: remote url not specified."
+	@echo "Usage:"
+	@echo "       make gitremote url=<repo-url>"
+	@echo ""
+endif
+
 ###############
 # PRODCOMPOSE #
 ###############
