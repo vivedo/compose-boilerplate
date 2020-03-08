@@ -1,4 +1,4 @@
-PROJECT_NAME=DockerStd
+PROJECT_NAME=`cat .projectname`
 
 COMPOSE=docker-compose --project-name=$(PROJECT_NAME) -f docker/docker-compose.yml
 DEVCOMPOSE=$(COMPOSE) -f docker/docker-compose.dev.yml
@@ -29,6 +29,17 @@ else
 	@echo "Error: remote url not specified."
 	@echo "Usage:"
 	@echo "       make gitremote url=<repo-url>"
+	@echo ""
+endif
+
+.PHONY: setproject
+setproject:
+ifdef $(name)
+	@echo ($name) > .projectname
+else
+	@echo "Error: project name not specified."
+	@echo "Usage:"
+	@echo "       make setproject name=<repo-url>"
 	@echo ""
 endif
 
